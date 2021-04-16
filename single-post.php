@@ -11,7 +11,7 @@ get_header();
 
                     <?php
 
-                    while( get_posts() ) {
+                    while( have_posts() ) {
                         the_post();
                         
                         the_post_thumbnail_url();

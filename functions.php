@@ -10,4 +10,12 @@ add_theme_support( 'widgets' );
 
 dynamic_sidebar(); // tänk wp_nav_menu() */
 
+
+register_nav_menus(
+    array(
+    'huvudmeny' => 'Huvudmeny',
+    'meny-undersidor' => 'Meny Undersidor'
+    )
+);
+
 ?>

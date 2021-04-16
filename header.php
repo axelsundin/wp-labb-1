@@ -20,7 +20,7 @@ wp_head();
     <div class="container">
         <div class="row">
             <div class="col-xs-8 col-sm-6">
-                <a class="logo" href="index.html">Labb 1</a>
+                <a class="logo" href="http://localhost:8888/wp-labb-1/">Labb 1</a>
             </div>
             <div class="col-sm-6 hidden-xs">
                 <form id="searchform" class="searchform">
@@ -56,8 +56,8 @@ wp_head();
         <div class="row">
             <div class="col-xs-12">
 
-            <?php 
-            wp_nav_menu();
+            <?php
+            wp_nav_menu( array( 'theme_location' => 'huvudmeny' ) );
             ?>
 
             </div>
