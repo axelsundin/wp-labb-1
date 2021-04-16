@@ -35,7 +35,7 @@
 				</div>
 
             <?php
-                }
+                } // avslutar loopen
             ?>
 
 			</section>

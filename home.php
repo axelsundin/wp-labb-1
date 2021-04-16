@@ -15,7 +15,7 @@
 					?>
 
 					<article>
-						<img src="<?php the_post_thumbnail_url() // skriver ut postens utvalda bild?>" alt=""/> 
+						<img src="<?php the_post_thumbnail_url() // skriver ut postens utvalda bild ?>" alt=""/> 
 						<h2 class="title">
 							<a href="<?php the_permalink() //skriver ut postens permalänk ?>"><?php the_title(); // skriver ut postens titel?></a>
 						</h2>
@@ -33,15 +33,19 @@
 						<?php the_content(); // skriver ut postens innehåll ?>
 					</article>
 					<?php
-					}
+					} // avslutar loopen
 					?>
 					
+					
 					<nav class="navigation pagination">
-						<h2 class="screen-reader-text">Inläggsnavigering</h2>
+					<?php
+					 the_posts_pagination();
+					?>
+						<!-- <h2 class="screen-reader-text">Inläggsnavigering</h2>
 						<a class="prev page-numbers" href="">Föregående</a>
 						<span class="page-numbers current">1</span>
 						<a class="page-numbers" href="">2</a>
-						<a class="next page-numbers" href="">Nästa</a>
+						<a class="next page-numbers" href="">Nästa</a> -->
 					</nav>
 				</div>
 				<aside id="secondary" class="col-xs-12 col-md-3">
@@ -119,5 +123,5 @@
 </main>
 
 <?php
-	get_footer(); //Skriver ut header.php
+	get_footer(); //Skriver ut footer.php
 ?>

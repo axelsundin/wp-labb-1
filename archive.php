@@ -33,7 +33,7 @@
 						<?php the_content(); // skriver ut postens innehåll ?>
 					</article>
 					<?php
-					}
+					} // avslutar loopen
 					?>
 					
 					<nav class="navigation pagination">
@@ -119,5 +119,5 @@
 </main>
 
 <?php
-	get_footer(); //Skriver ut header.php
+	get_footer(); //Skriver ut footer.php
 ?>
