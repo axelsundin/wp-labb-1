@@ -35,18 +35,9 @@
 					<?php
 					} // avslutar loopen
 					?>
-					
-					
-					<nav class="navigation pagination">
 					<?php
-					 the_posts_pagination();
+					the_posts_pagination(); // Visar sidnavigation om det finns fler än 5 posts
 					?>
-						<!-- <h2 class="screen-reader-text">Inläggsnavigering</h2>
-						<a class="prev page-numbers" href="">Föregående</a>
-						<span class="page-numbers current">1</span>
-						<a class="page-numbers" href="">2</a>
-						<a class="next page-numbers" href="">Nästa</a> -->
-					</nav>
 				</div>
 				<aside id="secondary" class="col-xs-12 col-md-3">
 					<div id="sidebar">

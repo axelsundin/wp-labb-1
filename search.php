@@ -34,6 +34,8 @@
 					</article>
 					<?php
 					} // avslutar loopen
+					dynamic_sidebar();
+					the_posts_pagination(); // Visar sidnavigation om det finns fler än 5 posts
 					?>
 				</div>
 			</div>
