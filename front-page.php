@@ -1,14 +1,13 @@
 <?php
-    get_header();
+    get_header(); //Skriver ut header.php
 ?>
-
 
 		<main>
 			<section>
 			
             <?php
-                while ( have_posts() ) {
-                    the_post();
+                while ( have_posts() ) { //loopar över posts om de finns
+                    the_post(); // förbereder aktuell post, och tar bort den ur have_posts()
             ?>
 
 
@@ -16,16 +15,16 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="hero">
-                            <img src="<?php the_post_thumbnail_url() ?>" alt=""/>
+                            <img src="<?php the_post_thumbnail_url() // skriver ut postens utvalda bild ?>" alt=""/>
                                 <div class="text">
 
                                 <?php
 
                                 echo "<h1>";
-                                the_title();
+                                the_title(); // skriver ut postens titel
                                 echo "</h1>";
 
-                                the_content();
+                                the_content(); // skriver ut postens innehåll
 
                                 ?>
 
@@ -43,6 +42,6 @@
 		</main>
 
 <?php 
-	get_footer();
+	get_footer(); //Skriver ut footer.php
 ?>
 

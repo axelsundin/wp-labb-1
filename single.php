@@ -1,5 +1,5 @@
 <?php
-get_header();
+get_header(); //Skriver ut header.php
 ?>
 
 <main>
@@ -8,15 +8,28 @@ get_header();
             <div class="row">
                 <div id="primary" class="col-xs-12 col-md-9">
                     <article>
-
+    
                     <?php
 
-                    while( have_posts() ) {
-                        the_post();
-                        
-                        the_post_thumbnail_url();
-                        the_title();
-                        the_content();
+                    while( have_posts() ) { //loopar över posts om de finns
+                        the_post(); // förbereder aktuell post, och tar bort den ur have_posts()
+                    ?>
+                        <img src="<?php the_post_thumbnail_url(); // skriver ut postens utvalda bild ?>">    
+                    
+                        <h1><?php the_title(); // skriver ut postens titel ?></h1>
+                        <ul class="meta">
+							<li>
+								<i class="fa fa-calendar"></i> <?php the_time('F j, Y'); // skriver ut postens datum(månad, dag, år) ?>
+							</li>
+							<li>
+								<i class="fa fa-user"></i> <?php the_author_posts_link(); // länkar till sida med alla posts från författaren ?>
+							</li>
+							<li>
+								<i class="fa fa-tag"></i> <?php the_category(', '); // länkar till postens kategori-sidor ?>
+							</li>
+						</ul>  
+                    <?php
+                        the_content(); // skriver ut postens innehåll
                     }
 
                     ?>
@@ -98,5 +111,5 @@ get_header();
 </main>
 
 <?php
-get_footer();
+get_footer(); //Skriver ut footer.php
 ?>
