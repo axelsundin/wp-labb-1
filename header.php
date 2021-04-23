@@ -22,37 +22,15 @@ wp_head(); // Kör alla actions kopplade till 'wp_head'. Ritar exempelvis ut adm
             <div class="col-xs-8 col-sm-6">
                 <a class="logo" href="http://localhost:8888/wp-labb-1/">Labb 1</a>
             </div>
-            <div class="col-sm-6 hidden-xs">
-                <form id="searchform" class="searchform">
-                    <?php 
-                    get_search_form();
-                    ?>
-                    <!-- <div>
-                        <label class="screen-reader-text">Sök efter:</label>
-                        <input type="text" />
-                        <input type="submit" value="Sök" />
-                    </div> -->
-                </form>
+            <div class="col-xs-8 col-sm-6">
+                <?php
+                dynamic_sidebar('customsearch'); //lägger in sökwidget
+                ?>
             </div>
-            <div class="col-xs-4 text-right visible-xs">
-                <div class="mobile-menu-wrap">
-                    <i class="fa fa-search"></i>
-                    <i class="fa fa-bars menu-icon"></i>
-                </div>
-            </div>
+               
         </div>
     </div>
 </header>
-
-<div class="mobile-search">
-    <form id="searchform" class="searchform">
-        <div>
-            <label class="screen-reader-text">Sök efter:</label>
-            <input type="text" />
-            <input type="submit" value="Sök" />
-        </div>
-    </form>
-</div>
 
 <nav id="nav">
     <div class="container">

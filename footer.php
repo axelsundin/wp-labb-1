@@ -16,25 +16,13 @@
 			</p>
 			<p>
 				Tel: 0123456789<br />
-				E-post: <a href="">info@thecompany.com</a>
+				E-post: <a href="mailto:info@thecompany.com">info@thecompany.com</a>
 			</p>
 		</div>
 		<div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
-			<h4>Social media</h4>
-			<ul class="social">
-				<li>
-					<i class="fa fa-facebook"></i> <a href="">Facebook</a>
-				</li>
-				<li>
-					<i class="fa fa-twitter"></i> <a href="">Twitter</a>
-				</li>
-				<li>
-					<i class="fa fa-instagram"></i> <a href="">Instagram</a>
-				</li>
-				<li>
-					<i class="fa fa-linkedin"></i> <a href="">LinkedIn</a>
-				</li>
-			</ul>
+			<?php
+			dynamic_sidebar('socialmedia'); // Visar länkar till sociala medier
+			?>
 		</div>
 	</div>
 	<div class="row bottom">

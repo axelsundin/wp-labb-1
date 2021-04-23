@@ -7,7 +7,7 @@
 		<div class="container">
 			<div class="row">
 				<div id="primary" class="col-xs-12 col-md-9">
-					<h1>Sökresultat:</h1>
+					<h1>Sökresultat för: <?php the_search_query() ?></h1>
 
 					<?php
 					while ( have_posts() ) { //loopar över posts om de finns
@@ -34,10 +34,12 @@
 					</article>
 					<?php
 					} // avslutar loopen
-					dynamic_sidebar();
 					the_posts_pagination(); // Visar sidnavigation om det finns fler än 5 posts
 					?>
 				</div>
+				<?php 
+				get_sidebar(); //skriver ut sidebar
+				?>
 			</div>
 		</div>
 	</section>

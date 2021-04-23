@@ -1,4 +1,5 @@
 <?php
+    get_option('template');
     get_header(); //Skriver ut header.php
 ?>
 
